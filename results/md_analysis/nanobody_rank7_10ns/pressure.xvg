@@ -1,0 +1,65 @@
+# This file was created Sun May 17 01:12:43 2026
+# Created by:
+#                :-) GROMACS - gmx energy, 2026.0-conda_forge (-:
+# 
+# Executable:   /root/miniconda3/envs/gmx_md/bin.AVX2_256/gmx
+# Data prefix:  /root/miniconda3/envs/gmx_md
+# Working dir:  /teams/YingChiLab_1702378116/MaishaZhang/PPIFlow-main/md_runs/nanobody_rank7_10ns
+# Command line:
+#   gmx energy -f npt.edr -o pressure.xvg
+# gmx energy is part of G R O M A C S:
+#
+# Gromacs Runs One Microsecond At Cannonball Speeds
+#
+@    title "GROMACS Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(bar)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Pressure"
+    0.000000  -408.014374
+    1.000000    6.838995
+    2.000000  -20.362289
+    3.000000   74.182503
+    4.000000   54.131672
+    5.000000  -68.496552
+    6.000000  -117.263405
+    7.000000  -33.568184
+    8.000000  -65.177437
+    9.000000  -15.001678
+   10.000000   50.930115
+   11.000000  -11.857647
+   12.000000   26.138329
+   13.000000   32.387280
+   14.000000  -72.307854
+   15.000000   34.402012
+   16.000000   43.709183
+   17.000000  101.598732
+   18.000000  -53.340588
+   19.000000   17.679108
+   20.000000    7.724230
+   21.000000  -30.804153
+   22.000000  -31.669027
+   23.000000   37.347668
+   24.000000  -86.721642
+   25.000000   26.392975
+   26.000000    5.350680
+   27.000000   62.054401
+   28.000000  -88.701942
+   29.000000   53.682140
+   30.000000   53.779179
+   31.000000  -16.049706
+   32.000000   -9.616790
+   33.000000  -48.853985
+   34.000000  -20.919641
+   35.000000  -98.823921
+   36.000000  -32.201488
+   37.000000   -7.817729
+   38.000000  -60.566330
+   39.000000   -9.922122
+   40.000000  -68.171295

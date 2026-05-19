@@ -1,0 +1,57 @@
+# This file was created Sun May 17 00:57:13 2026
+# Created by:
+#                :-) GROMACS - gmx energy, 2026.0-conda_forge (-:
+# 
+# Executable:   /root/miniconda3/envs/gmx_md/bin.AVX2_256/gmx
+# Data prefix:  /root/miniconda3/envs/gmx_md
+# Working dir:  /teams/YingChiLab_1702378116/MaishaZhang/PPIFlow-main/md_runs/nanobody_rank7_10ns
+# Command line:
+#   gmx energy -f nvt.edr -o temperature.xvg
+# gmx energy is part of G R O M A C S:
+#
+# GROup of MAchos and Cynical Suckers
+#
+@    title "GROMACS Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(K)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Temperature"
+    0.000000  300.465302
+    1.000000  297.816467
+    2.000000  299.937134
+    3.000000  300.224060
+    4.000000  300.152710
+    5.000000  299.726837
+    6.000000  300.008087
+    7.000000  299.824615
+    8.000000  301.065674
+    9.000000  300.120544
+   10.000000  300.086914
+   11.000000  298.523193
+   12.000000  299.991547
+   13.000000  300.914337
+   14.000000  299.575653
+   15.000000  298.891998
+   16.000000  300.179596
+   17.000000  301.081970
+   18.000000  299.585938
+   19.000000  299.706055
+   20.000000  301.683350
+   21.000000  299.902740
+   22.000000  301.260864
+   23.000000  299.848389
+   24.000000  301.148193
+   25.000000  299.727142
+   26.000000  300.041992
+   27.000000  299.380951
+   28.000000  301.397034
+   29.000000  300.684631
+   30.000000  299.529877
+   31.000000  298.736420
+   32.000000  300.346252

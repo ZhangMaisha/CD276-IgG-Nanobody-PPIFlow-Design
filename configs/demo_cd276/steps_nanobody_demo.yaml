@@ -1,0 +1,134 @@
+# steps_antibody.yaml
+
+python: "/root/miniconda3/envs/ppiflow_af3/bin/python"
+
+# ============================================================
+# PPIFlowStep
+# ============================================================
+PPIFlowStep:
+  model_weights: "ckpts/nanobody.ckpt"
+  config: "/teams/YingChiLab_1702378116/MaishaZhang/PPIFlow-main/tool/PPIFlow/configs/inference_nanobody.yaml"
+
+# ============================================================
+# AbMPNNStep（Stage 1）
+# ============================================================
+AbMPNNStep_stage1:
+  chain_list: "A"
+  num_seq_per_target: 8
+  sampling_temp: 0.1
+  batch_size: 1
+  omit_AAs: "C"
+
+# ============================================================
+# FlowpackerStep（Stage 1）
+# ============================================================
+FlowpackerStep_stage1:
+  config_path: "/teams/YingChiLab_1702378116/MaishaZhang/PPIFlow-main/tool/flowpacker/config/inference/base.yaml"
+  use_gt_masks: true
+
+# ============================================================
+# AF3scoreStep（Stage 1）
+# ============================================================
+AF3scoreStep_stage1:
+  db_dir: "/lustre/grp/cmclab/share/wangd/af3_data"
+  model_dir: "/lustre/grp/cmclab/share/chenmc/Alphafold3params"
+  num_workers: 2
+
+# ============================================================
+# FilterStep（Stage 1）
+# ============================================================
+FilterStep_stage1:
+  filters:
+    iptm_A_C: "> 0.3"
+    chain_A_ptm: "> 0.7"
+
+# ============================================================
+# RosettaFixStep
+# ============================================================
+RosettaFixStep:
+  rosetta_bin: "/lustre/grp/cmclab/share/yuql/tool/rosetta.binary.linux.release-371/main/source/bin/rosetta_scripts.static.linuxgccrelease"
+  interface_dist: 12.0
+  native_xml: null
+  plot_toggle: false
+  overwrite: true
+
+# ============================================================
+# PartialStep
+# ============================================================
+PartialStep:
+  model_weights: "ckpts/nanobody.ckpt"
+  config: "/teams/YingChiLab_1702378116/MaishaZhang/PPIFlow-main/tool/PPIFlow/configs/inference_nanobody.yaml"
+  samples_per_target: 10
+  start_t: 0.7
+  antigen_chain: "C"
+  heavy_chain: "A"
+  retry_Limit: 10
+
+# ============================================================
+# AbMPNNStep（Stage 2）
+# ============================================================
+AbMPNNStep_stage2:
+  chain_list: "A"
+  num_seq_per_target: 8
+  sampling_temp: 0.1
+  batch_size: 1
+  omit_AAs: "C"
+
+# ============================================================
+# FlowpackerStep（Stage 2）
+# ============================================================
+FlowpackerStep_stage2:
+  config_path: "/tools/flowpacker/config/inference/base.yaml"
+  use_gt_masks: true
+
+# ============================================================
+# AF3scoreStep（Stage 2）
+# ============================================================
+AF3scoreStep_stage2:
+  db_dir: "/lustre/grp/cmclab/share/wangd/af3_data"
+  model_dir: "/lustre/grp/cmclab/share/chenmc/Alphafold3params"
+  num_workers: 2
+
+# ============================================================
+# FilterStep（Stage 2）
+# ============================================================
+FilterStep_stage2:
+  filters:
+    iptm_A_C: "> 0.3"
+    chain_A_ptm: "> 0.7"
+
+# ============================================================
+# ReFoldStep
+# ============================================================
+ReFoldStep:
+  db_dir: "/lustre/grp/cmclab/share/wangd/af3_data"
+  model_dir: "/lustre/grp/cmclab/share/chenmc/Alphafold3params"
+  hmmer_path: "/lustre/grp/cmclab/share/wangd/hmmer/bin"
+  run_MSA: true
+  remove_template: true
+  run_AF3_inference: false
+  seed_num: "5"
+  cuda_bin: "/usr/local/cuda-12.6/bin"
+  cuda_lib: "/usr/local/cuda-12.6/lib64"
+  xla_client_mem_fraction: "0.95"
+
+# ============================================================
+# DockQStep
+# ============================================================
+DockQStep:
+  dockq_exe: "/root/miniconda3/envs/ppiflow_af3/bin/DockQ"
+  dockq_args:
+    - "--short"
+  recursive: false
+
+# ============================================================
+# RosettaRelaxStep
+# ============================================================
+RosettaRelaxStep:
+  batch_idx: "0"
+  dump_pdb: false
+
+
+RankStep:
+  dockq_threshold: 0.49
+  output_csv_name: ranked_designs.csv

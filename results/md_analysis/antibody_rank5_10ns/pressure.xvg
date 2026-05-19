@@ -1,0 +1,65 @@
+# This file was created Sun May 17 18:41:48 2026
+# Created by:
+#                :-) GROMACS - gmx energy, 2026.0-conda_forge (-:
+# 
+# Executable:   /root/miniconda3/envs/gmx_cuda/bin.AVX2_256/gmx
+# Data prefix:  /root/miniconda3/envs/gmx_cuda
+# Working dir:  /teams/YingChiLab_1702378116/MaishaZhang/PPIFlow-main/md_runs/antibody_rank5_10ns
+# Command line:
+#   gmx energy -f npt.edr -o pressure.xvg
+# gmx energy is part of G R O M A C S:
+#
+# GRoups of Organic Molecules in ACtion for Science
+#
+@    title "GROMACS Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(bar)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Pressure"
+    0.000000  -411.209564
+    1.000000  185.031860
+    2.000000  -59.476551
+    3.000000   98.739037
+    4.000000  -35.062454
+    5.000000   94.635277
+    6.000000  -42.387852
+    7.000000   37.441730
+    8.000000   93.678566
+    9.000000   56.380672
+   10.000000   -8.753535
+   11.000000  -19.153948
+   12.000000   13.622944
+   13.000000   15.385445
+   14.000000  -12.194805
+   15.000000  104.747467
+   16.000000   -6.170818
+   17.000000  -113.230469
+   18.000000  -21.723480
+   19.000000   40.742809
+   20.000000   47.288197
+   21.000000   12.957019
+   22.000000  -22.073736
+   23.000000  -44.876881
+   24.000000  -100.512169
+   25.000000   57.607300
+   26.000000    1.185133
+   27.000000  -80.197533
+   28.000000  -57.016987
+   29.000000  -52.288422
+   30.000000  -66.120438
+   31.000000   83.523048
+   32.000000  -23.826845
+   33.000000   46.039921
+   34.000000   21.808844
+   35.000000  -12.393558
+   36.000000   36.839058
+   37.000000   42.320400
+   38.000000   28.340963
+   39.000000  -58.474457
+   40.000000   65.761490

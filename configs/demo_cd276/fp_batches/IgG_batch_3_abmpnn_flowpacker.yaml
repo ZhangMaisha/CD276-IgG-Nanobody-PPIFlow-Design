@@ -1,0 +1,33 @@
+task:
+  name: "IgG_batch_3_abmpnn_flowpacker"
+  gentype: "antibody"
+  antigen_pdb: "/teams/YingChiLab_1702378116/MaishaZhang/PPIFlow-main/input/CD276_C.pdb"
+  antigen_chain: "C"
+  specified_hotspots: "C242,C243,C244,C245,C246,C247,C248,C282,C283,C284,C285"
+  framework_pdb: "/teams/YingChiLab_1702378116/MaishaZhang/PPIFlow-main/example/target_and_framework_pdb/6nou_scfv_framework.pdb"
+  heavy_chain: "A"
+  light_chain: "B"
+  cdr_length: "CDRH1,8-8,CDRH2,8-8,CDRH3,10-20,CDRL1,6-9,CDRL2,3-3,CDRL3,9-11"
+  samples_per_target: 25
+  output_base_dir: "/teams/YingChiLab_1702378116/MaishaZhang/PPIFlow-main/output/abmpnn_flowpacker_designs/IgG_batch_3"
+
+steps:
+  PPIFlowStep: false
+  MPNNStep_stage1: false
+  AbMPNNStep_stage1: true
+  FlowpackerStep_stage1: true
+  AF3scoreStep_stage1: false
+  FilterStep_stage1: false
+
+  RosettaFixStep: false
+  PartialStep: false
+  MPNNStep_stage2: false
+  AbMPNNStep_stage2: false
+  FlowpackerStep_stage2: false
+  AF3scoreStep_stage2: false
+  FilterStep_stage2: false
+  ReFoldStep: false
+  DockQStep: false
+  RosettaRelaxStep: false
+  RankStep: false
+  ReportStep: false
