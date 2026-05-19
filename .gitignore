@@ -222,3 +222,6 @@ __marimo__/
 
 # MD trajectories
 *.xtc
+*.trr
+*.cpt
+*.tng
