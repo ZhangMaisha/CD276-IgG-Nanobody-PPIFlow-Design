@@ -1,0 +1,3 @@
+candidate,intermolecular_contacts,charged_charged_contacts,charged_polar_contacts,charged_apolar_contacts,polar_polar_contacts,apolar_polar_contacts,apolar_apolar_contacts,apolar_NIS_percent,charged_NIS_percent,dg_kcal_mol,kd_M
+nanobody_rank7_AF3,41,3.0,8.0,6.0,0.0,16.0,8.0,43.71,18.54,-9.7,7.3e-08
+antibody_rank5_AF3,91,4.0,11.0,14.0,15.0,24.0,23.0,42.43,18.73,-9.7,7.5e-08

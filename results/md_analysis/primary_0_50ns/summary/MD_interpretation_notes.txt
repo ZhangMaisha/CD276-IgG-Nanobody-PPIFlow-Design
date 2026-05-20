@@ -1,0 +1,27 @@
+
+Interpretation guide:
+
+RMSD:
+A stable complex should show an initial rise followed by a plateau. Continuous increase suggests structural drift.
+
+Rg:
+Stable Rg indicates that the complex remains compact. Continuous increase suggests loosening or unfolding.
+
+Interface contacts:
+Stable antigen-binder association should maintain interface contacts. A drop toward zero suggests dissociation.
+
+Hydrogen bonds:
+H-bonds can fluctuate, but persistent or recurrent interfacial H-bonds support interface stability.
+
+Minimum distance:
+Stable complexes should maintain low binder-antigen minimum distance. Sudden increase suggests separation.
+
+RMSF:
+CDR loops are expected to be more flexible than framework regions. Excessive RMSF in CDRs together with contact/hbond loss suggests unstable binding.
+
+SASA:
+Stable SASA suggests no major unfolding or exposure change. A large continuous increase may indicate structural loosening.
+
+Temperature, pressure, density:
+These are primarily MD quality-control metrics. Temperature should remain near 300 K and density should be stable.
+

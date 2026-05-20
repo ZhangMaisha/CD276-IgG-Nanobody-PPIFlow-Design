@@ -1,5 +1,0 @@
-python: "/root/miniconda3/envs/ppiflow_af3/bin/python"
-
-PPIFlowStep:
-  model_weights: "ckpts/antibody.ckpt"
-  config: "/teams/YingChiLab_1702378116/MaishaZhang/PPIFlow-main/tool/PPIFlow/configs/inference_nanobody.yaml"
