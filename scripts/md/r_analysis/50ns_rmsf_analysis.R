@@ -68,22 +68,25 @@ clean_chain_label <- function(chain) {
   )
 }
 
-theme_report <- function(base_size = 12) {
+theme_report <- function(base_size = 15) {
   theme_minimal(base_size = base_size) +
     theme(
       panel.grid.major.x = element_blank(),
       panel.grid.minor = element_blank(),
       panel.grid.major.y = element_line(colour = "grey85", linewidth = 0.3),
-      axis.line = element_line(colour = "black", linewidth = 0.4),
-      axis.ticks = element_line(colour = "black", linewidth = 0.4),
-      axis.text = element_text(colour = "black"),
-      axis.title = element_text(colour = "black"),
+      axis.line = element_line(colour = "black", linewidth = 0.45),
+      axis.ticks = element_line(colour = "black", linewidth = 0.45),
+      axis.text = element_text(size = 14, colour = "black"),
+      axis.title = element_text(size = 16, colour = "black"),
       legend.position = "right",
       legend.title = element_blank(),
+      legend.text = element_text(size = 13),
+      legend.key.size = unit(0.55, "cm"),
       legend.background = element_blank(),
       plot.title = element_blank(),
       plot.subtitle = element_blank(),
-      plot.background = element_rect(fill = "white", colour = NA)
+      plot.background = element_rect(fill = "white", colour = NA),
+      plot.margin = margin(8, 10, 8, 10)
     )
 }
 
