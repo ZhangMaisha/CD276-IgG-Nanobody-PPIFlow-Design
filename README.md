@@ -19,11 +19,13 @@ This repository contains the design configurations, selected structures, helper 
 - `scripts/design/`: design-generation and candidate-export helpers
 - `scripts/prodigy/`: Prodigy scoring, recheck parsing, and plotting helpers
 - `scripts/md/`: MD setup, extension, and post-processing helpers
+- `scripts/md/r_analysis/`: R plotting scripts used for the 0-50 ns MD figure export
+- `scripts/visualization/`: PyMOL helper scripts for figure preparation
 - `scripts/archive/`: archived helper scripts retained for reference only
 - `results/epitope_analysis/`: epitope-support outputs
 - `results/prodigy/initial_screening/`: full-candidate Prodigy ranking summaries
 - `results/prodigy/af3_recheck/`: AF3 recheck tables, source workbook, and derived figures
-- `results/md_analysis/primary_0_50ns/`: primary reported MD summary and comparison figures
+- `results/md_analysis/primary_0_50ns/`: primary reported MD summary, combined figures, and per-system figure panels
 - `ppiflow_af3_merged.yaml`: merged Conda environment for the PPIFlow and AF3-related workflow
 
 ## Main Outputs
@@ -32,7 +34,7 @@ This repository contains the design configurations, selected structures, helper 
 - `results/prodigy/initial_screening/antibody_ranked_all.csv`: full initial Prodigy ranking for IgG candidates
 - `results/prodigy/initial_screening/nanobody_ranked_all.csv`: full initial Prodigy ranking for nanobody candidates
 - `results/prodigy/af3_recheck/final_AF3_prodigy_summary.csv`: consolidated Prodigy comparison before and after AF3 re-evaluation
-- `results/prodigy/af3_recheck/figures/Figure2A_binding_energy.png`: summary figure for the selected AF3-rechecked candidates
+- `results/prodigy/af3_recheck/figures/Figure2A_Prodigy_DeltaG.png`: summary figure for the selected AF3-rechecked candidates
 - `results/md_analysis/primary_0_50ns/`: primary MD result directory containing both summary tables and comparison figures
 
 ## Notes
@@ -44,5 +46,7 @@ Large intermediate files, raw model outputs, and MD trajectory/state files are i
 Several execution scripts still assume the original external workspace layout under `/teams/.../PPIFlow-main`. They document how the runs were carried out, but they are not standalone scripts for this export repository.
 
 `scripts/prodigy/plot_prodigy_recheck.R` expects the manually consolidated Prodigy workbook to be available in the working directory when the script is run. A copy is retained under `results/prodigy/af3_recheck/source_tables/`.
+
+Single-chain structure-prediction JSON outputs for the CD276 monomer are retained under `input/epitope_inputs/structure_prediction/` as supporting files for the epitope-selection stage.
 
 `scripts/archive/10ns_md_analysis.R` is kept only as an archived reference script. The 10 ns-only MD result folders are stored outside this repository because the continuous 0-50 ns MD summary is treated as the primary reported MD result.
