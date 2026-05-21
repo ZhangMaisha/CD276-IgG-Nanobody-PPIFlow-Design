@@ -25,7 +25,7 @@ This repository contains the design configurations, selected structures, helper 
 - `results/epitope_analysis/`: epitope-support outputs
 - `results/prodigy/initial_screening/`: full-candidate Prodigy ranking summaries
 - `results/prodigy/af3_recheck/`: AF3 recheck tables, source workbook, and derived figures
-- `results/md_analysis/primary_0_50ns/`: primary reported MD summary, combined figures, and per-system figure panels
+- `results/md_analysis/primary_0_50ns/`: primary reported MD summary, combined figures, per-system figure panels, and raw XVG analysis files
 - `ppiflow_af3_merged.yaml`: merged Conda environment for the PPIFlow and AF3-related workflow
 
 ## Main Outputs
@@ -35,7 +35,7 @@ This repository contains the design configurations, selected structures, helper 
 - `results/prodigy/initial_screening/nanobody_ranked_all.csv`: full initial Prodigy ranking for nanobody candidates
 - `results/prodigy/af3_recheck/final_AF3_prodigy_summary.csv`: consolidated Prodigy comparison before and after AF3 re-evaluation
 - `results/prodigy/af3_recheck/figures/Figure2A_Prodigy_DeltaG.png`: summary figure for the selected AF3-rechecked candidates
-- `results/md_analysis/primary_0_50ns/`: primary MD result directory containing both summary tables and comparison figures
+- `results/md_analysis/primary_0_50ns/`: primary MD result directory containing summary tables, comparison figures, per-system plots, and raw XVG analysis files
 
 ## Notes
 
